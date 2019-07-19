@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function calc_imc(){
+      exa_fis_talla = document.getElementById("exa_fis_talla").value;
+      exa_fis_peso = document.getElementById("exa_fis_peso").value;
+      exa_fis_imc = (exa_fis_peso / Math.pow(exa_fis_talla, 2)).toFixed(2);
+      document.getElementById("exa_fis_imc").value = exa_fis_imc;
+    }
+</script>
+
+</head>
+<body>
+    <form id="calc_imc">
+      <input type="text" id="exa_fis_talla" name="exa_fis_talla" value="0" onChange="calc_imc();">
+      <input type="text" id="exa_fis_peso" name="exa_fis_peso"value="0" onChange="calc_imc();">
+      <input type="text" id="exa_fis_imc" name="exa_fis_imc">
+    </form>
+</body>
+</html>
